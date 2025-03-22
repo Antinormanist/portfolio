@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "main/css/welcome.css" %}">
+    <link rel="stylesheet" href="{% static "main/css/main-ru.css" %}">
+    <title>It's me again</title>
+    <link rel="icon" type="image/x-icon" href="{% static "main/images/favicon-32x32.png" %}">
+</head>
+<body>
+    <nav>
+        <a class="frame__title goryachev-bogdan-head" href="{% url "main:welcome-ru" %}">Горячёв Богдан</a>
+        <div class="nav-right">
+            <a class="change-language-to-rus" href="main.html" style="text-decoration: none;">Ru</a>
+            <a class="download-resume" href="{% static  "main/Горячев Богдан, backend developer резюме.pdf" %}" download>Скачать резюме</a>
+            <a class="get-contact-list">Контакты</a>
+            <div class="contact-div none">
+                <div class="phone-div"><img src="{% static "main/icons/Phone_icon.png" %}" alt="phone" width="28" height="28"> <p>+7 914 340 76 72</p></div>
+                <div class="email-div"><img src="{% static "main/icons/email.png" %}" alt="email" width="28" height="20"> <p>bogdanit.goryachev.2009@gmail.com</p></div>
+                <div class="telegram-div"><img src="{% static "main/icons/Telegram_icon.png" %}" alt="telegram" width="28" height="22"> <a href="https://t.me/Antinormanist" target="_blank">@Antinormanist</a></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="thank-you">
+            <p class="thank-you-text">
+                Привет! Благодарю за визит. Моё имя Богдан и я люблю писать код.
+                Сейчас мне 15 и я учусь в школе в Спасске - Дальнем, но скоро я перееду в Москву
+                и поступлю в колледж. Я был вдохновлён Noukash и #SimpleCode.
+            </p>
+            <div class="open-resume-pdf">
+                <a href="{% static "main/Горячев Богдан, backend developer резюме.pdf" %}" target="_blank" class="pdf-open">Резюме</a>
+            </div>
+        </div>
+        <div class="skills-wrapper">
+            <div class="skills-go-left">
+                <div class="python-skill skill">Python</div>
+                <div class="javascript-skill skill">JavaScript</div>
+                <div class="cpp-skill skill">C++</div>
+                <div class="django-skill skill">Django</div>
+                <div class="git-skill skill">Git</div>
+                <div class="docker-skill skill">Docker</div>
+                <div class="postgres-skill skill">PostgreSQL</div>
+                <div class="redis-skill skill">Redis</div>
+                <div class="celery-skill skill">Celery</div>
+                <div class="postman-skill skill">Postman</div>
+                <div class="html-skill skill">HTML</div>
+                <div class="css-skill skill">CSS</div>
+            </div>
+        </div>
+        <h1 class="project-view">Проэкт</h1>
+        <div class="project-list">
+            <div class="sushi-shop-project project-left">
+                <img src="{% static "main/images/sushi-shop.png" %}" alt="sushi-shop screen" width="640" height="340">
+                <div class="project-item-info">
+                    <p class="project-head-info">Суши магазин - Сделано с Django</p>
+                    <a href="https://antinormanist2.pythonanywhere.com/" target="_blank" class="sushi-site-link project-site-link">сайт</a>
+                    <a href="https://github.com/Antinormanist/sushi-shop" target="_blank" class="sushi-github-link project-github-link">гитхаб</a>
+                </div>
+            </div>
+            <div class="task-manager-project project-right">
+                <img src="{% static "main/images/task-manager.png" %}" alt="task-manager screen" width="640" heigt="340">
+                <div class="project-item-info">
+                    <p class="project-head-info">Таск Менеджер - Сделано с Django, Celery и API</p>
+                    <a href="https://antinormanist.pythonanywhere.com/" target="_blank" class="task-manager-site-link project-site-link">сайт</a>
+                    <a href="https://github.com/Antinormanist/TaskManager" target="_blank" class="task-manager-github-link project-github-link">гитхаб</a>
+                </div>
+            </div>
+        </div>
+        <div class="write-me">
+            <h2 class="write-me-message">Напиши мне!</h2>
+            <form method="post" class="write-me-contact">
+                <label for="name">имя</label>
+                <input type="text" name="name" id="name">
+                <label for="email">почта</label>
+                <input type="email" name="email" id="email">
+                <label for="message">сообщение</label>
+                <textarea name="message" id="message"></textarea>
+                <button>отправить</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="logos">
+            <a class="github" href="https://github.com/Antinormanist" target="_blank"><img src="{% static "main/icons/github-mark-white.svg" %}" alt="github" width="64" height="64"></a>
+            <a class="leetcode" href="https://leetcode.com/u/Antinotmanist/" target="_blank"><img src="{% static "main/icons/LeetcodeOrig.png" %}" alt="leetcode" width="64" height="64"></a>
+        </div>
+    </footer>
+
+    <script src="{% static "main/js/welcome.js" %}"></script>
+</body>
+</html>

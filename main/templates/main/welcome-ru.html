@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ title }}</title>
+		<meta name="description" content="A set of animated ambient canvas backgrounds with different effects" />
+		<meta name="keywords" content="canvas, ambient, background, animation, javascript, demo, web development" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{% static "main/css/base.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "main/css/demo4.css" %}" />
+		<link rel="stylesheet" href="{% static "main/css/welcome.css" %}">
+		<link rel="stylesheet" href="{% static "main/css/welcome-ru.css" %}">
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<link rel="icon" type="image/x-icon" href="{% static "main/images/favicon-32x32.png" %}">
+	</head>
+	<body class="demo-4">
+		<main>
+			<div class="frame">
+				<div class="frame__title-wrap">
+					<a class="frame__title goryachev-bogdan-head" href="{% url "main:welcome-ru" %}">Горячёв Богдан</a>
+					<div class="frame__title head-div-titl">
+						<a class="change-language-to-rus" href="{% url "main:welcome" %}">Ru</a>
+						<a class="download-resume" href="{% static "main/Горячев Богдан, backend developer резюме.pdf" %}" download>Скачать резюме</a>
+						<a class="get-contact-list">Контакты</a>
+						<div class="contact-div none">
+							<div class="phone-div"><img src="{% static "main/icons/Phone_icon.png" %}" alt="phone" width="28" height="28"> <p>+7 914 340 76 72</p></div>
+							<div class="email-div"><img src="{% static "main/icons/email.png" %}" alt="email" width="28" height="20"> <p>bogdanit.goryachev.2009@gmail.com</p></div>
+							<div class="telegram-div"><img src="{% static "main/icons/Telegram_icon.png" %}" alt="telegram" width="28" height="22"> <a href="https://t.me/Antinormanist" target="_blank">@Antinormanist</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content content--canvas">
+				<h2 class="welcome-hello">Привет, Я <span class="welcome-hello-bogdan">Богдан</span></h2>
+				<h2 class="welcome-developer">Я бэкенд разработчик</h2>
+				<a class="view-my-work-button" href="{% url "main:main-ru" %}">мои работы</a>
+				<div class="view-my-work-hover-box"></div>
+			</div>
+		</main>
+		<script src="{% static "main/js/noise.min.js" %}"></script>
+		<script src="{% static "main/js/util.js" %}"></script>
+		<script src="{% static "main/js/coalesce.js" %}"></script>
+		<script src="{% static "main/js/welcome.js" %}"></script>
+	</body>
+</html>

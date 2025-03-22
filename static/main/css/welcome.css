@@ -1,0 +1,150 @@
+.head-div-titl {
+    display: flex;
+}
+
+.welcome-hello {
+    z-index: 100;
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 20rem;
+    margin-bottom: 0;
+}
+
+.welcome-hello-bogdan {
+    color: #FDDE65;
+}
+
+.welcome-developer {
+    z-index: 100;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.view-my-work-button {
+    z-index: 101;
+    background: none;
+    color: #FDDE65;
+    border: none;
+    font-size: 2.5rem;
+    border: 2px #FDDE65 solid;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.view-my-work-button:hover {
+    cursor: pointer;
+    color: #FDDE65;
+}
+
+.view-my-work-hover-box {
+    display: none;
+    border: 2px solid #FDDE65;
+    height: 70px;
+    width: 245px;
+    z-index: 100;
+    border-radius: 15px;
+    position: absolute;
+    top: 27.25rem;
+}
+
+.view-my-work-button:hover + .view-my-work-hover-box {
+    display: block;
+}
+
+.frame__title:hover {
+    cursor: pointer;
+}
+
+.goryachev-bogdan-head:hover {
+    color: #FDDE65;
+}
+.goryachev-bogdan-head::after {
+    content: '';
+    display: block;
+    background-color: #FDDE65;
+    height: 3px;
+    width: 0%;
+    transition: .5s;
+}
+
+.goryachev-bogdan-head:hover::after {
+    width: 100%;
+}
+
+.change-language-to-rus::after, .download-resume::after, .get-contact-list::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    width: 0%;
+    transition: .5s;
+}
+
+.change-language-to-rus:hover::after, .download-resume:hover::after, .get-contact-list:hover::after {
+    width: 100%;
+}
+
+.frame__title {
+    color: #FDDE65;
+}
+
+.change-language-to-rus {
+    color: #fff;
+    background: none;
+    border: none;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.download-resume {
+    color: #fff;
+    margin-right: 2rem;
+}
+
+.get-contact-list {
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-div div {
+    color: #fff;
+}
+
+.telegram-div a {
+    color: #fff;
+}
+
+.contact-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 5rem;
+    border: 2px #FDDE65 solid;
+    background-color: #000;
+    padding: 0 8px;
+    border-radius: 15px;
+    right: 5rem;
+}
+
+.phone-div, .email-div, .telegram-div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 50px;
+    margin: 0;
+}
+
+.phone-div p, .email-div p, .telegram-div a {
+    font-size: 1.25rem;
+}
+
+.phone-div img, .email-div img, .telegram-div img {
+    color: #fff;
+}
+
+.none {
+    display: none;
+}

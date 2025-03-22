@@ -1,0 +1,14 @@
+.get-contact-list, .goryachev-bogdan-head, .download-resume, .view-my-work-button {
+    font-weight: bold;
+}
+
+.view-my-work-hover-box {
+    display: none;
+    border: 2px solid #FDDE65;
+    height: 70px;
+    width: 220px;
+    z-index: 100;
+    border-radius: 15px;
+    position: absolute;
+    top: 27.25rem;
+}
