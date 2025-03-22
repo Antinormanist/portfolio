@@ -15,7 +15,7 @@
     <nav>
         <a class="frame__title goryachev-bogdan-head" href="{% url "main:welcome-ru" %}">Горячёв Богдан</a>
         <div class="nav-right">
-            <a class="change-language-to-rus" href="main.html" style="text-decoration: none;">Ru</a>
+            <a class="change-language-to-rus" href="{% url "main:main" %}" style="text-decoration: none;">Ru</a>
             <a class="download-resume" href="{% static  "main/Горячев Богдан, backend developer резюме.pdf" %}" download>Скачать резюме</a>
             <a class="get-contact-list">Контакты</a>
             <div class="contact-div none">
@@ -70,18 +70,6 @@
                     <a href="https://github.com/Antinormanist/TaskManager" target="_blank" class="task-manager-github-link project-github-link">гитхаб</a>
                 </div>
             </div>
-        </div>
-        <div class="write-me">
-            <h2 class="write-me-message">Напиши мне!</h2>
-            <form method="post" class="write-me-contact">
-                <label for="name">имя</label>
-                <input type="text" name="name" id="name">
-                <label for="email">почта</label>
-                <input type="email" name="email" id="email">
-                <label for="message">сообщение</label>
-                <textarea name="message" id="message"></textarea>
-                <button>отправить</button>
-            </form>
         </div>
     </main>
     <footer>
